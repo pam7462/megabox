@@ -21,23 +21,13 @@
   <!-- swiper -->
   <link rel="stylesheet" href="css/swiper.min.css">
   <script src="js/swiper.min.js"></script>
+  <script src="js/skip.min.js"></script>
+  <script src="js/banner.min.js"></script>
   <script>
     $(function(){
       // swiper
       var swiper = new Swiper('.swiper-container');
 
-      // skip menu
-      $('.skip>a').focus(function(){
-        $(this).parent('.skip').css('top','0');
-      });
-      $('.skip>a').focusout(function(){
-        $(this).parent('.skip').css('top','-50px');
-      });
-
-      // close banner
-      $('.close').click(function(){
-        $('.banner>div').hide();
-      });
     })
   </script>
   <link rel="stylesheet" href="css/reset.css">
@@ -54,6 +44,7 @@
       background-color:#330a94;
       position:absolute;
       top:-50px;
+      z-index:1;
     }
     .skip a{
       margin:0 5px;
@@ -69,11 +60,11 @@
     /* banner */
     .banner01{
       text-align:center;
-      background-color:gray;
+      background-color:#eee9e3;
     }
     .banner02{
       text-align:center;
-      background-color:thistle;
+      background-color:#5580ad;
     }
     .banner img{
       display:inline-block;
@@ -81,7 +72,7 @@
     .banner .close{
       width:20px;
       height:20px;
-      border:1px solid black;
+      /* border:1px solid black; */
       background-color:gray;
       color:white;
       text-align:center;
@@ -107,7 +98,7 @@
   </div>
   <div class="wrap">
     <div class="banner">
-      <div class="banner01 active">
+      <div class="banner01">
         <img src="images/banner01.jpg" alt="banner01">
         <div class="close">X</div>
       </div>
