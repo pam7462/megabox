@@ -34,7 +34,10 @@
         $(this).parent('.skip').css('top','-50px');
       });
 
-
+      // close banner
+      $('.close').click(function(){
+        $('.banner>div').hide();
+      });
     })
   </script>
   <link rel="stylesheet" href="css/reset.css">
@@ -62,6 +65,39 @@
     .skip a:focus{
       border:2px solid white;
     }
+
+    /* banner */
+    .banner01{
+      text-align:center;
+      background-color:gray;
+    }
+    .banner02{
+      text-align:center;
+      background-color:thistle;
+    }
+    .banner img{
+      display:inline-block;
+    }
+    .banner .close{
+      width:20px;
+      height:20px;
+      border:1px solid black;
+      background-color:gray;
+      color:white;
+      text-align:center;
+      line-height:20px;
+      cursor:pointer;
+      position:absolute;
+      right:0;
+      bottom:0;
+    }
+    .banner>div{
+      display:none;
+      position:relative;
+    }
+    .banner>div.active{
+      display:block;
+    }
   </style>
 </head>
 <body>
@@ -69,7 +105,18 @@
     <a href="#section">본문 바로가기</a>
     <a href="#footer">푸터 바로가기</a>
   </div>
-  <div class="wrap"></div>
+  <div class="wrap">
+    <div class="banner">
+      <div class="banner01 active">
+        <img src="images/banner01.jpg" alt="banner01">
+        <div class="close">X</div>
+      </div>
+      <div class="banner02">
+        <img src="images/banner02.jpg" alt="banner02">
+        <div class="close">X</div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
