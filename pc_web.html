@@ -37,7 +37,15 @@
         location.href='https://github.com/pam7462/megabox';
       });
 
-
+      $('#sitemap_btn').click(function(){
+        $('.sitemap').toggle();
+        var imgSrc=$('#sitemap_btn');
+        if(imgSrc.attr('src')=='images/hamburger.png'){
+          imgSrc.attr('src','images/close.png');
+        }else{
+          imgSrc.attr('src','images/hamburger.png');
+        }
+      });
     })
   </script>
   <link rel="stylesheet" href="css/reset.css">
@@ -401,8 +409,11 @@
       color:white;
     }
 
-    .sub_nav{
+    .sitemap,.sub_nav{
       display:none;
+    }
+    #sitemap_btn{
+      cursor:pointer;
     }
 
     .section{
