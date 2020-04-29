@@ -81,7 +81,7 @@
       top:50%;
       transform:translate(-50%,-50%);
       width:500px;
-      height:400px;
+      height:420px;
       background:white;
     }
 
@@ -104,9 +104,13 @@
       box-sizing:border-box;
       width:100%;
       margin:20px 0;
+      border:1px solid #999;
       padding:12px;
       font-weight:bold;
       color:#330a94;
+    }
+    .login_form form .id_pass:hover{
+      border:1px solid #333;
     }
     .login_form form .id_pass::placeholder{
       font-weight:bold;
@@ -127,6 +131,38 @@
       font-size:20px;
       cursor:pointer;
     }
+    .login_form .login_menu{
+      padding:12px 20px;
+      display:flex;
+      flex-flow:row nowrap;
+      justify-content:center;
+    }
+    .login_form .login_menu li{
+      margin:0 10px;
+    }
+    .login_form .login_menu li a{
+      color:gray;
+    }
+    .login_form .login_menu li a:hover{
+      text-decoration:underline;
+    }
+
+    .login_form .login_menu li:nth-child(2n){
+      width:1px;
+      background-color:gray;
+    }
+    .login_form .sns_login{
+      padding:12px 20px;
+      display:grid;
+      grid-template-columns:auto auto auto auto;
+      grid-column-gap:20px;
+    }
+    .login_form .sns_login li{
+      text-align:center;
+    }
+
+
+
     /* git_hub */
     .git_hub{
       width:150px;
@@ -224,10 +260,10 @@
       font-size:12px;
       font-weight:bold;
     }
-    ol{
+    .pop_up ol{
       margin:10px 6px;
     }
-    ol,li{
+    .pop_up ol,.pop_up li{
       text-align:left;
       list-style:decimal inside;
       text-indent:5px;
@@ -311,9 +347,11 @@
         <li>
           <a href="#">ID/PW찾기</a>
         </li>
+        <li></li>
         <li>
           <a href="#">회원가입</a>
         </li>
+        <li></li>
         <li>
           <a href="#">비회원 예매</a>
         </li>

@@ -24,7 +24,7 @@ html,body,div,span,h1,h2,h3,h4,h5,h6,p,article,section,header,aside,nav,footer,u
   vertical-align:baseline;
 }
 
-span,input,label,select,img,a,button{
+span,input,label,select,button{
   display:block;
 }
 ul,ol,li{
