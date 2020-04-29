@@ -92,7 +92,7 @@
       max-width:2000px;
       margin:0 auto;
     }
-    .content{
+    .container{
       width:1100px;
       margin:0 auto;
     }
@@ -196,9 +196,18 @@
     }
 
     .header{
-      height:100px;
-      background:rgba(0,0,0,0.2);
+      height:90px;
+      background:linear-gradient(145deg,#0c0908 10%,#161d2b 60%,#2b1f22 90%);
     }
+    .header .content{
+      display:flex;
+      flex-flow:row nowrap;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+
+
     .section{
       height:1000px;
       background:rgba(255,0,0,0.2);
@@ -207,9 +216,8 @@
       height:300px;
       background:rgba(0,255,0,0.2);
     }
-    .content{
+    .container{
       height:100%;
-      background:rgba(0,0,255,0.2);
     }
   </style>
 </head>
@@ -262,17 +270,47 @@
       </form>
     </div>
     <header class="header">
-      <div class="content">
-        <nav class="nav01"></nav>
-        <div class="logo"></div>
-        <nav class="nav02"></nav>
+      <div class="container">
+        <div class="content">
+          <nav class="nav01">
+            <ul class="top_nav">
+              <li><a href="#" title="VIP LOUNGE">VIP LOUNGE</a></li>
+              <li><a href="#" title="멤버십">멤버십</a></li>
+              <li><a href="#" title="고객센터">고객센터</a></li>
+            </ul>
+            <ul class="bottom_nav">
+              <li><a href="#" title="사이트맵"><img src="images/hamburger.png" alt="토글메뉴"></a></li>
+              <li><a href="#" title="검색"><img src="images/search.png" alt="검색"></a></li>
+              <li><a href="#" title="영화">영화</a></li>
+              <li><a href="#" title="예매">예매</a></li>
+              <li><a href="#" title="극장">극장</a></li>
+            </ul>
+          </nav>
+          <div class="logo">
+            <img src="images/white-logo.png" alt="화이트로고">
+          </div>
+          <nav class="nav02">
+            <ul class="top_nav">
+              <li><a href="#" title="로그인">로그인</a></li>
+              <li><a href="#" title="회원가입">회원가입</a></li>
+              <li><a href="#" title="빠른예매">빠른예매</a></li>
+            </ul>
+            <ul class="bottom_nav">
+              <li><a href="#" title="이벤트">이벤트</a></li>
+              <li><a href="#" title="스토어">스토어</a></li>
+              <li><a href="#" title="혜택">혜택</a></li>
+              <li><a href="#" title="상영시간표"><img src="images/schedule.png" alt="상영시간표"></a></li>
+              <li><a href="#" title="나의 메가박스"><img src="images/mymega.png" alt="나의 메가박스"></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <section class="section">
-      <div class="content"></div>
+      <div class="container"></div>
     </section>
     <footer class="footer">
-      <div class="content"></div>
+      <div class="container"></div>
     </footer>
   </div>
 
