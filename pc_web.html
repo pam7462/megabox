@@ -65,6 +65,68 @@
       border:2px solid white;
     }
 
+    /* login_form */
+    .login_form{
+      position:fixed;
+      left:0;
+      top:0;
+      z-index:3;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.8);
+    }
+    .login_form .content{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width:500px;
+      height:400px;
+      background:white;
+    }
+
+    .login_form  .login_tit{
+      padding:12px 24px;
+      background-color:#330a94;
+    }
+    .login_form .login_tit p{
+      float:left;
+      font-size:18px;
+      color:white
+    }
+    .login_form .login_tit img{
+      float:right;
+    }
+    .login_form form{
+      padding:12px 24px;
+    }
+    .login_form form .id_pass{
+      box-sizing:border-box;
+      width:100%;
+      margin:20px 0;
+      padding:12px;
+      font-weight:bold;
+      color:#330a94;
+    }
+    .login_form form .id_pass::placeholder{
+      font-weight:bold;
+      color:#330a94;
+    }
+    .login_form form input[type="checkbox"],
+    .login_form form label{
+      display:inline-block;
+      margin-bottom:16px;
+    }
+    .login_form form input[type="button"]{
+      width:100%;
+      border-radius:2px;
+      padding:12px;
+      background-color:#330a94;
+      color:white;
+      font-weight:bold;
+      font-size:20px;
+      cursor:pointer;
+    }
     /* git_hub */
     .git_hub{
       width:150px;
@@ -230,6 +292,58 @@
   <div class="git_hub">
     <p>깃허브로 오세요</p>
   </div>
+
+  <!-- login form -->
+  <div class="login_form">
+    <div class="content">
+      <div class="login_tit clearfix">
+        <p>로그인</p>
+        <img src="images/close.png" alt="닫기" id="close">
+      </div>
+      <form>
+        <input class="id_pass" type="text" placeholder="아이디">
+        <input class="id_pass" type="password" placeholder="비밀번호">
+        <input type="checkbox" id="save_id">
+        <label for="save_id">아이디 저장</label>
+        <input type="button" value="로그인">
+      </form>
+      <ul class="login_menu">
+        <li>
+          <a href="#">ID/PW찾기</a>
+        </li>
+        <li>
+          <a href="#">회원가입</a>
+        </li>
+        <li>
+          <a href="#">비회원 예매</a>
+        </li>
+      </ul>
+      <ul class="sns_login">
+        <li>
+          <a href="#">
+            <img src="images/ico-facebook.png" alt="facebook" title="페이스북 로그인">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/ico-naver.png" alt="naver" title="네이버 로그인">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/ico-kakao.png" alt="kakao" title="카카오 로그인">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/ico-payco.png" alt="payco" title="페이코 로그인">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
   <!-- wrap -->
   <div class="wrap">
     <!-- banner -->
@@ -291,7 +405,7 @@
           </div>
           <nav class="nav02">
             <ul class="top_nav">
-              <li><a href="#" title="로그인">로그인</a></li>
+              <li><a href="#" title="로그인" id="login_btn">로그인</a></li>
               <li><a href="#" title="회원가입">회원가입</a></li>
               <li><a href="#" title="빠른예매">빠른예매</a></li>
             </ul>
