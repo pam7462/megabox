@@ -401,10 +401,38 @@
       font-size:18px;
       color:white;
     }
+    
+    .sub_nav{
+      position:absolute;
+      left:0;
+      bottom:-40px;
+      width:100%;
+      padding:10px;
+      background:rgba(0,0,0,0.5);
+      display:flex;
+      justify-content:center;
+    }
 
     .sitemap,.sub_nav{
       display:none;
     }
+    .nav01>.bottom_nav>li>a{
+      padding-bottom:12px;
+    }
+    .nav02>.bottom_nav>li>a{
+      padding-bottom:16px;
+    }
+    .bottom_nav>li:hover>a{
+      border-bottom:2px solid white;
+    }
+    .bottom_nav>li:hover>.sub_nav{
+      display:flex;
+    }
+    .border_none{
+      border-bottom:none !important;
+    }
+
+
     #sitemap_btn{
       cursor:pointer;
     }
@@ -642,7 +670,9 @@
                   </div>
                 </div>
               </li>
-              <li><a href="#" title="검색"><img src="images/search.png" alt="검색"></a></li>
+              <li>
+                <a href="#" title="검색" class="border_none"><img src="images/search.png" alt="검색"></a>
+              </li>
               <li>
                 <a href="#" title="영화">영화</a>
                 <ul class="sub_nav">
@@ -687,7 +717,7 @@
                 </ul>
               </li>
               <li>
-                <a href="#" title="스토어">스토어</a>
+                <a href="#" title="스토어" class="border_none">스토어</a>
               </li>
               <li>
                 <a href="#" title="혜택">혜택</a>
@@ -696,8 +726,8 @@
                   <li><a href="#">제휴 / 할인</a></li>
                 </ul>
               </li>
-              <li><a href="#" title="상영시간표"><img src="images/schedule.png" alt="상영시간표" id="schedule"></a></li>
-              <li><a href="#" title="나의 메가박스"><img src="images/mymega.png" alt="나의 메가박스"></a></li>
+              <li><a href="#" title="상영시간표" class="border_none"><img src="images/schedule.png" alt="상영시간표" id="schedule"></a></li>
+              <li><a href="#" title="나의 메가박스" class="border_none"><img src="images/mymega.png" alt="나의 메가박스"></a></li>
             </ul>
           </nav>
         </div>
