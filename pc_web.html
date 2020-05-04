@@ -37,15 +37,22 @@
       login();
       popup();
       sitemap();
-      // swiper
-      var swiper = new Swiper('.swiper-container');
-      $('.git_hub').click(function(){
-        location.href='https://github.com/pam7462/megabox';
-      });
       subPosition();
       $(window).resize(function(){
         subPosition();
       })
+
+      // swiper
+      var swiper = new Swiper('.swiper-container',{
+        slidesPerView: 4,
+        spaceBetween: 40,
+      });
+
+
+      $('.git_hub').click(function(){
+        location.href='https://github.com/pam7462/megabox';
+      });
+      
     })
   </script>
   <link rel="stylesheet" href="css/reset.css">
@@ -355,6 +362,9 @@
     .top_nav a{
       color:#999;
     }
+    .top_nav a:hover{
+      text-decoration:underline;      
+    }
     .bottom_nav a{
       color:#fff;
       font-size:20px;
@@ -454,10 +464,7 @@
       cursor:pointer;
     }
 
-    .section{
-      height:1000px;
-      background:rgba(255,0,0,0.2);
-    }
+    
     .footer{
       height:300px;
       background:rgba(0,255,0,0.2);
@@ -466,6 +473,42 @@
       height:100%;
     }
   </style>
+
+
+  <style>
+    .section{
+      padding:70px 0 120px;
+      background:linear-gradient(145deg,#0c0908 10%,#161d2b 40%,#2b1f22 90%);
+    }
+    .movie_chart h2{
+      text-align:center;
+    }
+    .movie_chart h2 a{
+      border-bottom:1px solid white;
+      padding-bottom:5px;
+      font-weight:normal;
+      font-size:15px;
+      color:white;
+    }
+    .poster{
+      overflow:hidden;
+      position:relative;
+      border-radius:5px;
+    }
+    .poster>img{
+      width:100%;
+    }
+    .poster>.poster_number{
+      position:absolute;
+      left:20px;
+      top:20px;
+      font-size:36px;
+      color:white;
+      text-shadow:2px 2px 3px black;
+    }
+    
+  </style>
+
 </head>
 <body>
   <!-- skip -->
@@ -529,7 +572,6 @@
     </div>
   </div>
 
-
   <!-- wrap -->
   <div class="wrap">
     <!-- banner -->
@@ -543,6 +585,7 @@
         <div class="close">X</div>
       </div>
     </div>
+    <!-- pop_up -->
     <div class="pop_up">
       <h3>예방 수칙 안내</h3>
       <p>
@@ -569,6 +612,7 @@
         <input type="button" value="X" id="close_btn">
       </form>
     </div>
+    <!-- header -->
     <header class="header">
       <div class="container">
         <div class="content">
@@ -751,7 +795,52 @@
       </div>
     </header>
     <section class="section">
-      <div class="container"></div>
+      <div class="container">
+        <article class="alticle movie_chart">
+          <div class="content">
+            <h2>
+              <a href="#">박스오피스</a>
+            </h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster01.jpg" alt="poster01">
+                      <p class="poster_number">1</p>
+                      <div class="poster_txt" style="display:none;">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 9.1</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn">
+                      <div><span>하트</span> 601</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide">2</div>
+                <div class="swiper-slide">3</div>
+                <div class="swiper-slide">4</div>
+                <div class="swiper-slide">5</div>
+                <div class="swiper-slide">6</div>
+                <div class="swiper-slide">7</div>
+                <div class="swiper-slide">8</div>
+                <div class="swiper-slide">9</div>
+                <div class="swiper-slide">10</div>
+                <div class="swiper-slide">11</div>
+                <div class="swiper-slide">12</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
     <footer class="footer">
       <div class="container"></div>
