@@ -482,6 +482,7 @@
     }
     .movie_chart h2{
       text-align:center;
+      margin-bottom:30px;
     }
     .movie_chart h2 a{
       border-bottom:1px solid white;
@@ -494,6 +495,7 @@
       overflow:hidden;
       position:relative;
       border-radius:5px;
+      margin-bottom:8px;
     }
     .poster>img{
       width:100%;
@@ -505,6 +507,69 @@
       font-size:36px;
       color:white;
       text-shadow:2px 2px 3px black;
+    }
+    .poster>.poster_txt{
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      padding:20px;
+      background:rgba(0,0,0,0.8);
+      color:white;
+      opacity:0;
+      transition:0.2s;
+    }
+    .poster:hover>.poster_txt{
+      opacity:1;
+    }
+    .poster>.poster_txt>p{
+      line-height:20px;
+    }
+    .poster>.poster_txt>p:first-child{
+      height:80%;
+      border-bottom:2px solid rgba(255,255,255,0.5);
+    }
+    .poster>.poster_txt>p:last-child{
+      height:20%;
+      padding:0 50px;
+      display:flex;
+      justify-content:space-around;
+      align-items: center;
+    }
+    .poster>.poster_txt>p:last-child>span{
+      font-size:24px;
+      color:#037b94;
+    }
+    .poster_btn{
+      color:white;
+    }
+    .poster_btn>div:first-child{
+      float:left;
+      display:flex;
+      justify-content:space-between;
+      box-sizing:border-box;
+      width:32%;
+      border:1px solid #555;
+      border-radius:5px;
+      padding:8px 15px;
+      background:#0c0a0a;
+      
+    }
+    .poster_btn>div:first-child>span{
+      text-indent:-9999px;
+      width:18px;
+      height:15px;
+      background-image:url('images/ico-set.png');
+    }
+    .poster_btn>div:last-child{
+      float:right;
+      box-sizing: border-box;
+      width:65%;
+      border-radius:5px;
+      padding:9px;
+      text-align:center;
+      background:#037b94;
     }
     
   </style>
@@ -808,7 +873,7 @@
                     <li class="poster">
                       <img src="images/poster01.jpg" alt="poster01">
                       <p class="poster_number">1</p>
-                      <div class="poster_txt" style="display:none;">
+                      <div class="poster_txt">
                         <p>
                           팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
                           세상의 모든 음악이 쏟아진다!<br>
@@ -819,7 +884,7 @@
                       </div>
                       
                     </li>
-                    <li class="poster_btn">
+                    <li class="poster_btn clearfix">
                       <div><span>하트</span> 601</div>
                       <div>예매</div>
                     </li>
