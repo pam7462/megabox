@@ -623,7 +623,23 @@
       padding:5px 30px 5px 0;
       color:white;
     }
-    
+    .mouse_ani{
+      position:relative;
+    }
+    .mouse_ani>img{
+      position:absolute;
+      top:30px;
+      left:50%;
+      transform:translateX(-50%);
+      animation:mmove 2s infinite ease-in-out;
+      animation-delay:2s;
+    }
+    @keyframes mmove{
+      0%{top:30px;}
+      40%{top:50px;}
+      60%{top:50px;}
+      100%{top:30px;}
+    }
   </style>
 
 </head>
@@ -1200,7 +1216,13 @@
                 <a href="#">빠른예매</a>
               </li>
             </ul>
+            <div class="mouse_ani">
+              <img src="images/ico-mouse.png" alt="mouse">
+            </div>
           </div>
+        </article>
+        <article class="article bonus">
+          
         </article>
       </div>
     </section>
