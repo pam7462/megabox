@@ -29,16 +29,23 @@
   <script src="js/pop_up_cookie.min.js"></script>
   <script src="js/login.min.js"></script>
   <script src="js/sitemap.min.js"></script>
+  <script src="js/sub_position.min.js"></script>
   <script>
     $(function(){
+      skip();
+      banner();
+      login();
+      popup();
+      sitemap();
       // swiper
       var swiper = new Swiper('.swiper-container');
-
       $('.git_hub').click(function(){
         location.href='https://github.com/pam7462/megabox';
       });
-
-
+      subPosition();
+      $(window).resize(function(){
+        subPosition();
+      })
     })
   </script>
   <link rel="stylesheet" href="css/reset.css">
@@ -410,7 +417,6 @@
       padding:10px;
       background:rgba(0,0,0,0.5);
       display:flex;
-      justify-content:center;
     }
 
     .sitemap,.sub_nav{
@@ -428,10 +434,21 @@
     .bottom_nav>li:hover>.sub_nav{
       display:flex;
     }
+    .sub_nav{
+      height:20px;
+    }
+    .sub_nav li{
+      padding:0 20px;
+    }
+    .sub_nav a{
+      font-size:16px;
+    }
+    .sub_nav a:hover{
+      text-decoration:underline;
+    }
     .border_none{
       border-bottom:none !important;
     }
-
 
     #sitemap_btn{
       cursor:pointer;
@@ -675,7 +692,7 @@
               </li>
               <li>
                 <a href="#" title="영화">영화</a>
-                <ul class="sub_nav">
+                <ul class="sub_nav" id="movie_sub">
                   <li><a href="#">전체영화</a></li>
                   <li><a href="#">큐레이션</a></li>
                   <li><a href="#">무비포스트</a></li>
@@ -683,7 +700,7 @@
               </li>
               <li>
                 <a href="#" title="예매">예매</a>
-                <ul class="sub_nav">
+                <ul class="sub_nav" id="ticket_sub">
                   <li><a href="#">빠른예매</a></li>
                   <li><a href="#">상영시간표</a></li>
                   <li><a href="#">더 부티크 프라이빗 예매</a></li>
@@ -691,7 +708,7 @@
               </li>
               <li>
                 <a href="#" title="극장">극장</a>
-                <ul class="sub_nav">
+                <ul class="sub_nav" id="theater_sub">
                   <li><a href="#">전체극장</a></li>
                   <li><a href="#">특별관</a></li>
                 </ul>
@@ -710,7 +727,7 @@
             <ul class="bottom_nav">
               <li>
                 <a href="#" title="이벤트">이벤트</a>
-                <ul class="sub_nav">
+                <ul class="sub_nav" id="event_sub">
                   <li><a href="#">진행중 이벤트</a></li>
                   <li><a href="#">지난 이벤트</a></li>
                   <li><a href="#">당첨자발표</a></li>
@@ -721,7 +738,7 @@
               </li>
               <li>
                 <a href="#" title="혜택">혜택</a>
-                <ul class="sub_nav">
+                <ul class="sub_nav" id="bonus_sub">
                   <li><a href="#">메가박스 멤버십</a></li>
                   <li><a href="#">제휴 / 할인</a></li>
                 </ul>
