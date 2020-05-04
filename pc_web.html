@@ -44,8 +44,9 @@
 
       // swiper
       var swiper = new Swiper('.swiper-container',{
-        slidesPerView: 4,
+        slidesPerView:3.5,
         spaceBetween: 40,
+        loop:true,       
       });
 
 
@@ -573,6 +574,55 @@
       background:#037b94;
       cursor: pointer;
     }
+    .swiper-container{
+      margin-bottom:50px;
+    }
+    .quick_movie_menu{
+      display:flex;
+      align-items:center;
+      height:80px;
+      background:rgba(0,0,0,0.5);
+    }
+    .quick_movie_menu>li{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      border-right:1px solid rgba(255,255,255,0.5);
+    }
+    .quick_movie_menu>li:last-child{
+      border-right:none;
+    }
+    .quick_movie_menu>li>a{
+      padding:5px 0 5px 30px;
+      font-size:16px;
+      color:white;
+      background-repeat:no-repeat;
+      background-position:left;
+    }
+    .quick_movie_menu>li>a:hover{
+      text-decoration:underline;
+    }
+    .quick_movie_menu>li:nth-child(2)>a{
+      background-image:url('images/ico-schedule-main.png');
+    }
+    .quick_movie_menu>li:nth-child(3)>a{
+      background-image:url('images/ico-boxoffice-main.png');
+    }
+    .quick_movie_menu>li:nth-child(4)>a{
+      padding-left:36px;
+      background-image:url('images/ico-quick-reserve-main.png');
+    }
+
+    .quick_movie_menu>li>input{
+      background-color:transparent;
+      background-image:url('images/ico-search-white.png');
+      background-repeat:no-repeat;
+      background-position:right;
+      border:none;
+      border-bottom:1px solid rgba(255,255,255,0.5);
+      padding:5px 30px 5px 0;
+      color:white;
+    }
     
   </style>
 
@@ -870,7 +920,7 @@
             </h2>
             <div class="swiper-container">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide slide01">
                   <ul>
                     <li class="poster">
                       <img src="images/poster01.jpg" alt="poster01">
@@ -892,19 +942,264 @@
                     </li>
                   </ul>
                 </div>
-                <div class="swiper-slide">2</div>
-                <div class="swiper-slide">3</div>
-                <div class="swiper-slide">4</div>
-                <div class="swiper-slide">5</div>
-                <div class="swiper-slide">6</div>
-                <div class="swiper-slide">7</div>
-                <div class="swiper-slide">8</div>
-                <div class="swiper-slide">9</div>
-                <div class="swiper-slide">10</div>
-                <div class="swiper-slide">11</div>
-                <div class="swiper-slide">12</div>
+                <div class="swiper-slide slide02">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster02.jpg" alt="poster02">
+                      <p class="poster_number">2</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 9.3</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 701</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide03">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster03.jpg" alt="poster03">
+                      <p class="poster_number">3</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 8.9</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 503</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide04">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster04.jpg" alt="poster04">
+                      <p class="poster_number">4</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 8.9</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 568</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide05">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster05.jpg" alt="poster05">
+                      <p class="poster_number">5</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 6.8</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 124</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide06">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster06.jpg" alt="poster06">
+                      <p class="poster_number">6</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 9.3</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 912</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide07">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster07.jpg" alt="poster07">
+                      <p class="poster_number">7</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 8.8</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 103</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide08">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster08.jpg" alt="poster08">
+                      <p class="poster_number">8</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 8.7</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 818</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide09">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster09.jpg" alt="poster09">
+                      <p class="poster_number">9</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 9.1</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 601</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide10">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster10.jpg" alt="poster10">
+                      <p class="poster_number">10</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 8.4</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 643</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide11">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster11.jpg" alt="poster11">
+                      <p class="poster_number">11</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 7.9</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 427</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="swiper-slide slide12">
+                  <ul>
+                    <li class="poster">
+                      <img src="images/poster12.jpg" alt="poster12">
+                      <p class="poster_number">12</p>
+                      <div class="poster_txt">
+                        <p>
+                          팝, 록, 클래식, 컨트리, 펑크, 테크노, K-POP까지<br>
+                          세상의 모든 음악이 쏟아진다!<br>
+                          노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.<br>
+                          어느 날 ‘파피’는 자신들 외에도
+                        </p>
+                        <p>관람평 <span> 8.5</span></p>
+                      </div>
+                      
+                    </li>
+                    <li class="poster_btn clearfix">
+                      <div><span>하트</span> 447</div>
+                      <div>예매</div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
+            <ul class="quick_movie_menu">
+              <li>
+                <input type="text" placeholder="영화명을 입력해주세요">
+              </li>
+              <li>
+                <a href="#">상영시간표</a>
+              </li>
+              <li>
+                <a href="#">박스오피스</a>
+              </li>
+              <li>
+                <a href="#">빠른예매</a>
+              </li>
+            </ul>
           </div>
         </article>
       </div>
