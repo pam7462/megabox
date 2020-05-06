@@ -30,6 +30,8 @@
   <script src="js/login.min.js"></script>
   <script src="js/sitemap.min.js"></script>
   <script src="js/sub_position.min.js"></script>
+  <script src="js/user_slider.min.js"></script>
+  
   <script>
     $(function(){
       skip();
@@ -71,20 +73,6 @@
         }
         userSlide(cnt);
       })
-
-      var bonus01=$('#grid_child01').children('div');
-      var bonus02=$('#grid_child02').children('div');
-      var bonusLine=$('.img_bar_par').children('div');
-      function userSlide(indexNum){
-        bonus01.hide().removeClass('active');
-        bonus01.eq(indexNum).show().addClass('active');
-        bonus02.hide().removeClass('active');
-        bonus02.eq(indexNum).show().addClass('active');
-        bonusLine.removeClass('active');
-        bonusLine.eq(indexNum).addClass('active');
-        $('#page').text(indexNum+1);
-      }
-      
     })
   </script>
   <link rel="stylesheet" href="css/reset.css">
