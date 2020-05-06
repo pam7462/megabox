@@ -917,7 +917,41 @@
       display:grid;
       grid-template-columns:320px auto;
       grid-column-gap:50px;
-      height:100px;
+    }
+    .curation_left{
+      position:relative;
+      text-align:right;
+    }
+    .curation_left .left_img,.curation_left .left_btn{
+      display:inline-block;
+    }
+    .curation_left .left_img{
+      border-radius:10px;
+      overflow: hidden;
+    }
+    .curation_left .left_btn{
+      padding:10px 0;
+      width:90%;
+    }
+    .curation_left .left_btn p{
+      float:left;
+      width:45%;
+      padding:15px 0;
+      text-align:center;
+      border:1px solid white;
+      border-radius:5px;
+      color:white;
+      font-size:20px;
+    }
+    .curation_left .left_btn p:nth-child(2){
+      float:right;
+      border-color:#0b9ebb;
+      background-color:#0b9ebb;
+    }
+    .curation_left .left_over{
+      position:absolute;
+      left:0;
+      top:0;
     }
   </style>
 
@@ -1638,7 +1672,27 @@
             <p><span>큐레이션 더보기</span><span>+</span></p>
           </div>
           <div class="curation_content">
-            <div class="curation_left"></div>
+            <div class="curation_left">
+              <div class="left_img">
+                <img src="images/poster07.jpg" alt="라라랜드">
+              </div>
+              <div class="left_btn clearfix">
+                <p class="view">상세보기</p>
+                <p class="ticket">예매</p>
+              </div>
+              <div class="left_over">
+                <div class="left_over_txt">
+                  <h4>
+                    MEGABOX<br>
+                    FILM<br>
+                    SOCIETY
+                  </h4>
+                </div>
+                <div class="left_over_base">
+                  삼각형
+                </div>
+              </div>
+            </div>
             <div class="curation_right"></div>
           </div>
         </div>
