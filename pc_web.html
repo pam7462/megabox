@@ -703,6 +703,28 @@
       top:0;
       opacity:1;
     }
+    #grid_child01>ul{
+      width:100%;
+      position:absolute;
+      bottom:0;
+      display:flex;
+      flex-flow:row nowrap;
+      justify-content:space-between;
+    }
+    .img_bar_par{
+      width:200px;
+      height:2px;
+      background:#eee;
+      display:flex;
+    }
+    .img_bar_par>div{
+      text-indent:-9999px;
+      flex:1;
+      height:2px;      
+    }
+    .img_bar_par>div.active{
+      background:#330a94;
+    }
     #grid_child03,#grid_child04,#grid_child05{
       overflow:hidden;
       border-radius:5px;
@@ -1311,7 +1333,26 @@
               <div class="img03">
                 <img src="images/bonus03.jpg" alt="보너스03">
               </div>
-
+              <ul>
+                <li id="img_bar">
+                  <div class="img_bar_par">
+                    <div class="active">1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                  </div>
+                </li>
+                <li id="img_btn">
+                  <span id="prev">이전</span>
+                  <span id="next">이후</span>
+                </li>
+                <li id="img_num">
+                  <span id=page>현재 페이지</span>
+                  <span>/</span>
+                  <span id="pages">전체 페이지</span>
+                </li>
+              </ul>
+              
             </div>
             <div id="grid_child02">
               <div class="img00 active">
