@@ -800,7 +800,86 @@
     img[src*="ico-bonus02"]{
       margin-top:6px;
     }
+    .grand_open{
+      padding:50px 0;
+    }
+    .grand_txt,.grand_img{
+      float:left;
+      margin-right:300px;
+      color:white;
+    }
+    .grand_txt>h3{
+      padding:20px 0;
+      color:white;
+    }
+    .grand_txt>hr{
+      width:30px;
+      height:2px;
+      background:white;
+    }
+    .grand_img{
+      position:relative;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      overflow:hidden;
+    }
+    .grand_img>div:nth-child(1){
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      z-index:1;
+    }
+    .grand_img>div:nth-child(2){
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:2;
+      width:100%;
+      height:100%;
+      background:white;
+      opacity:0;
+      transition:0.1s;
+    }
+    .grand_img:hover>div:nth-child(2){
+      opacity:1;
+    }
+    .grand_img>div:nth-child(3){
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:3;
+      width:100%;
+      height:100%;
+      display:flex;
+      flex-flow:column nowrap;
+      justify-content:center;
+      align-items:center;
+    }
 
+    .open_tit{
+      padding:5px 10px;
+      background-color:#0b9ebb;
+      margin-bottom:16px;
+    }
+    .open_sec1{
+      margin-bottom:16px;
+    }
+    .grand_img:hover .open_sec1{
+      color:#0b9ebb;
+    }
+    .open_sec2{
+      margin-bottom:16px;
+      font-weight:bold;
+      font-size:24px;
+    }
+    .grand_img:hover .open_sec2{
+      color:#0b9ebb;
+    }
+    .grand_img:hover .open_date{
+      color:#0b9ebb;
+    }
 
   </style>
 
@@ -1483,6 +1562,32 @@
               </a>
             </li>            
           </ul>
+        </article>
+        <article class="article grand_open">
+          <div class="contents clearfix">
+            <div class="grand_txt">
+              <p>LIFE THEATER MEGABOX</p>
+              <h3>
+                GRAND<br>
+                OPENING
+              </h3>
+              <hr>
+            </div>
+            <div class="grand_img">
+              <div>
+                <img src="images/bg-theater-new.jpg" alt="그랜드오폰극장">
+              </div>
+              <div>
+                화이트
+              </div>
+              <div>
+                <p class="open_tit">신규오픈</p>
+                <p class="open_sec1">경기</p>
+                <p class="open_sec2">용인기흥</p>
+                <p class="open_date">2020.05.14</p>
+              </div>
+            </div>
+          </div>
         </article>
       </div>
     </section>
