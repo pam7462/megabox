@@ -53,6 +53,37 @@
       $('.git_hub').click(function(){
         location.href='https://github.com/pam7462/megabox';
       });
+
+      var cnt=0;
+      $('#prev').click(function(){
+        if(cnt>0){
+          cnt--;
+        }else{
+          cnt=3;
+        }       
+        userSlide(cnt);
+      })
+      $('#next').click(function(){
+        if(cnt<3){
+          cnt++;
+        }else{
+          cnt=0;
+        }
+        userSlide(cnt);
+      })
+
+      var bonus01=$('#grid_child01').children('div');
+      var bonus02=$('#grid_child02').children('div');
+      var bonusLine=$('.img_bar_par').children('div');
+      function userSlide(indexNum){
+        bonus01.hide().removeClass('active');
+        bonus01.eq(indexNum).show().addClass('active');
+        bonus02.hide().removeClass('active');
+        bonus02.eq(indexNum).show().addClass('active');
+        bonusLine.removeClass('active');
+        bonusLine.eq(indexNum).addClass('active');
+        $('#page').text(indexNum+1);
+      }
       
     })
   </script>
@@ -642,7 +673,7 @@
       100%{top:30px;}
     }
   </style>
-
+  <!-- 혜택 -->
   <style>
     .bonus{
       box-sizing:border-box;
@@ -689,7 +720,7 @@
       left:0;
       top:100%;
       opacity:0;
-      transition:0.3s;
+      transition:0.8s;
     }
     #grid_child02>div{
       left:100%;
@@ -706,13 +737,28 @@
     #grid_child01>ul{
       width:100%;
       position:absolute;
-      bottom:0;
+      bottom:20px;
       display:flex;
       flex-flow:row nowrap;
       justify-content:space-between;
     }
+    #grid_child01 span{
+      color:#330a94;
+    }
+    #img_btn span{
+      font-weight:bolder;
+      font-size:20px;
+      color:gray;
+      cursor:pointer;
+    }
+    #img_btn span:hover{
+      color:#330a94;
+    }
+    #img_bar{
+      padding-top:8px;
+    }
     .img_bar_par{
-      width:200px;
+      width:160px;
       height:2px;
       background:#eee;
       display:flex;
@@ -725,6 +771,13 @@
     .img_bar_par>div.active{
       background:#330a94;
     }
+    #img_btn,#img_num{
+      display:flex;
+      justify-content:center;
+    }
+    #img_num{
+      padding-top:3px;
+    }
     #grid_child03,#grid_child04,#grid_child05{
       overflow:hidden;
       border-radius:5px;
@@ -732,6 +785,7 @@
     #grid_child03>img{
       height:100%;
     }
+    
   </style>
 </head>
 <body>
@@ -1343,13 +1397,13 @@
                   </div>
                 </li>
                 <li id="img_btn">
-                  <span id="prev">이전</span>
-                  <span id="next">이후</span>
+                  <span id="prev">&lt&nbsp&nbsp</span>
+                  <span id="next"> &gt</span>
                 </li>
                 <li id="img_num">
-                  <span id=page>현재 페이지</span>
-                  <span>/</span>
-                  <span id="pages">전체 페이지</span>
+                  <span id=page>1</span>
+                  <span>&nbsp/&nbsp</span>
+                  <span id="pages">4</span>
                 </li>
               </ul>
               
