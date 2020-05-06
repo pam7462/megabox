@@ -883,6 +883,44 @@
 
   </style>
 
+  <!-- 큐레이션 -->
+  <style>
+    .curation{
+      background-color:#252451;
+      padding:50px 0;
+    }
+    .curation .tit{
+      display:flex;
+      justify-content:space-between;
+    }
+    .curation .tit h2{
+      color:white;
+      font-weight:normal;
+      font-size:28px;
+    }
+    .curation .tit p{
+      color:rgba(255,255,255,0.6);
+      display:flex;
+      width:120px;
+      justify-content:space-between;
+      cursor:pointer;
+    }
+    .curation .tit p:hover span:first-child{
+      text-decoration:underline;
+    }
+    .curation .tit p span:last-child{
+      font-size:30px;
+      margin-top:-8px;
+    }
+    .curation_content{
+      padding:30px 0;
+      display:grid;
+      grid-template-columns:320px auto;
+      grid-column-gap:50px;
+      height:100px;
+    }
+  </style>
+
 </head>
 <body>
   <!-- skip -->
@@ -1591,6 +1629,22 @@
         </article>
       </div>
     </section>
+
+    <section class="curation">
+      <div class="container">
+        <div class="content">
+          <div class="tit">
+            <h2>큐레이션</h2>
+            <p><span>큐레이션 더보기</span><span>+</span></p>
+          </div>
+          <div class="curation_content">
+            <div class="curation_left"></div>
+            <div class="curation_right"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="container"></div>
     </footer>
