@@ -305,8 +305,25 @@
       .nav_bottom img{
         width:100%;
       }
-      
-
+      .nav_content{
+        padding-top:130px;
+      }
+      .nav_quick_icon{
+        display:flex;
+        flex-flow:row wrap;
+      }
+      .nav_quick_icon>li{
+        width:33.33333333333333%;
+        padding:20px 0;
+        text-align:center;
+      }
+      .nav_quick_icon>li img{
+        width:60px;
+        margin-bottom:6px;
+        border:1px solid rgba(0,0,0,0.2);
+        border-radius:50%;
+        padding:10px;
+      }
     </style>
 
     <!-- wrap스타일 -->
@@ -456,7 +473,44 @@
         </div>
       </div>
       <div class="nav_content">
-        
+        <ul class="nav_quick_icon">
+          <li>
+            <a href="#">
+              <img src="images/ico-rnb-movie.png" alt="movie">
+              <span>영화별 예매</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico-rnb-theater.png" alt="theater">
+              <span>극장별 예매</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico-rnb-mymega.png" alt="mymega">
+              <span>나의 메가박스</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico-rnb-post.png" alt="post">
+              <span>영화</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico-rnb-store.png" alt="store">
+              <span>스토어</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico-rnb-event.png" alt="event">
+              <span>이벤트</span>
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="nav_bottom">
         <img src="images/burger_banner.jpg" alt="burger_banner">
