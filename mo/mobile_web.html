@@ -46,7 +46,7 @@
         
       })
     </script>
-
+    <!-- 상단하단고정바스타일 -->
     <style>
       .static_top,.static_bottom{
        position:fixed;
@@ -77,15 +77,41 @@
       .static_top>li img{
         width:100%;
       }
-      .static_bottom{bottom:0;}
+      .static_bottom{
+        bottom:0;
+      }
+    </style>
+
+    <!-- login_form스타일 -->
+    <style>
+
+    </style>
+
+    <!-- wrap스타일 -->
+    <style>
       .wrap{
         height:1000px;
         background:purple;
       }
     </style>
+
   <title>라이프시어터</title>
 </head>
 <body>
+
+  <!-- 모바일기본스타일 -->
+  <style>
+    .container01,.container02{
+      box-sizing:border-box;
+      width:100%;
+      margin:0 16px;
+    }
+    .container02{
+      margin:0 0 0 16px;
+    }
+  </style>
+
+  <!-- 상단하단고정바 -->
   <div class="static_menu">
     <ul class="static_top">
       <li>
@@ -143,6 +169,56 @@
       </li>
     </ul>
   </div>
+
+  <!-- 로그인폼 -->
+  <div class="login_form">
+    <div class="container01">
+      <form>
+        <div class="login_tit">
+          <p>로그인</p>
+          <img id="close_btn" src="images/ico-close.png" alt="닫기">
+        </div>
+        <div class="login_content">
+          <input type="text" placeholder="아이디">
+          <input type="password" placeholder="비밀번호">
+          <div class="id_save">
+            <input type="checkbox" id="save_id">
+            <label for="save_id">아이디 저장</label>
+          </div>
+          <input type="button" value="로그인">
+          <ul class="login_search">
+            <li><a href="#">ID/PW찾기</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">비회원 예매확인</a></li>
+          </ul>
+          <ul class="login_sns">
+            <li>
+              <a href="#">
+                <img src="images/ico-facebook2.png" alt="facebook">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/ico-naver.png" alt="naver">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/ico-kakao.png" alt="kakao">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/ico-payco.png" alt="payco">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 본문 -->
   <div class="wrap">
 
   </div>
