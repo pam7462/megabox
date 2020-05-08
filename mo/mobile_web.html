@@ -51,8 +51,7 @@
             $('.static_top').css('background-color','rgba(0,0,0,0)');
           }
         });
-
-        
+      
         
       })
     </script>
@@ -65,6 +64,8 @@
       body{
         overflow:scroll;
         -ms-overflow-style:none;
+        /* 나중에 지울것 */
+        overflow:hidden;
       }
       body::-webkit-scrollbar{
         display:none;
@@ -219,6 +220,27 @@
 
     </style>
 
+    <!-- 버거메뉴 스타일 -->
+    <style>
+      .burger_menu{
+        position:fixed;
+        left:0;
+        top:0;
+        z-index:10000;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.5);
+        display:flex;
+        justify-content:flex-end;
+      }
+      .burger_menu nav{
+        width:360px;
+        height:100%;
+        background-color:white;
+      }
+
+    </style>
+
     <!-- wrap스타일 -->
     <style>
       .wrap{
@@ -226,6 +248,7 @@
         background:purple;
       }
     </style>
+
 
   <title>라이프시어터</title>
 </head>
@@ -338,6 +361,13 @@
         </div>
       </form>
     </div>
+  </div>
+
+  <!-- 버거메뉴 -->
+  <div class="burger_menu">
+    <nav>
+
+    </nav>
   </div>
 
   <!-- 본문 -->
