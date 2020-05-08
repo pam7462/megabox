@@ -54,6 +54,10 @@
             $('.static_top').css('background-color','rgba(0,0,0,0)');
           }
         });
+
+        $('#member_btn').click(function(){
+          $('.member_sub').slideToggle(300);
+        });
       
         
       })
@@ -306,7 +310,7 @@
         width:100%;
       }
       .nav_content{
-        padding-top:130px;
+        padding:130px 0;
       }
       .nav_quick_icon{
         display:flex;
@@ -323,6 +327,41 @@
         border:1px solid rgba(0,0,0,0.2);
         border-radius:50%;
         padding:10px;
+      }
+      .nav_list{
+        background-color:white;
+      }
+      .nav_list>li{
+        border-top:1px solid rgba(0,0,0,0.2);
+        padding:16px;
+      }
+      .nav_list a{
+        display:inline-block;
+        color:rgba(0,0,0,0.8);
+        width:100%;
+        height:100%;
+      }
+      #member_btn{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+      }
+      #member_btn::after{
+        content:'';
+        display:block;
+        width:20px;
+        height:20px;
+        background-image:url('images/ico-updown-off.png');
+        background-size:cover;
+      }
+      .member_sub{
+        display:none;
+        padding:10px;
+        background-color:#f9f9f9;
+      }
+      .member_sub>li{
+        list-style-type:decimal;
+        padding:10px 0;
       }
     </style>
 
@@ -508,6 +547,48 @@
             <a href="#">
               <img src="images/ico-rnb-event.png" alt="event">
               <span>이벤트</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav_list">
+          <li>
+            <a href="#">
+              극장안내
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              무비포스트
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              더 부티크 프라이빗 예매
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              제휴/할인 안내
+            </a>
+          </li>
+          <li>
+            <a href="#" id="member_btn">
+              멤버십 안내
+            </a>
+            <ul class="member_sub">
+              <li><a href="#">스페셜 멤버십</a></li>
+              <li><a href="#">멤버십 안내</a></li>
+              <li><a href="#">VIP LOUNGE</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              고객센터
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              [공지][카카오페이] 국민카드 전산시스...
             </a>
           </li>
         </ul>
