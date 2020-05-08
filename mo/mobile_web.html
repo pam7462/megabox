@@ -226,6 +226,8 @@
     <!-- 버거메뉴 스타일 -->
     <style>
       .burger_menu{
+        overflow:scroll;
+        -ms-overflow-style:none;
         position:fixed;
         left:0;
         top:0;
@@ -236,20 +238,29 @@
         display:flex;
         justify-content:flex-end;
       }
+      .burger_menu::-webkit-scrollbar{
+        display:none;
+      }
      
       .burger_menu nav{
         width:360px;
         height:100%;
         background-color:white;
       }
-      .burger_menu .nav_header{
-        padding:20px;
-        background:gray;
+      .nav_top{
+        position:fixed;
+        right:0;
+        top:0;
+        width:360px;
+        background:#160f2b;
+      }
+      .nav_header,.nav_join{
+        padding:10px 20px 30px;
         display:flex;
         align-items:center;
       }
       .nav_header>p{
-        flex:6;
+        flex:8;
         font-size:16px;
         color:white;
       }
@@ -259,13 +270,42 @@
         cursor:pointer;
         font-size:16px;
       }
-      .nav_header>a,.nav_header>img{
+      .nav_header>a{
         flex:1;
       }
       .nav_header img{
         width:100%;
       }
-
+      .nav_join{
+        border-top:1px solid rgba(255,255,255,0.5);
+        padding:16px 0;
+      }
+      .nav_join>a{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color:rgba(255,255,255,0.5);
+      }
+      .nav_join>a>img{
+        width:16px;
+        margin-right:10px;
+      }
+      .nav_join>a:nth-child(1){
+        flex:2;
+      }
+      .nav_join>a:nth-child(2){
+        flex:3;
+      }
+      .nav_bottom{
+        position:fixed;
+        right:0;
+        bottom:0;
+        width:360px;
+      }
+      .nav_bottom img{
+        width:100%;
+      }
+      
 
     </style>
 
@@ -397,13 +437,28 @@
       <div class="nav_top">
         <div class="nav_header">
           <p><span id="login_txt">로그인</span>후 이용하세요</p>
-          <a href="mobile_web.html"><img src="images/ico-rnb-home.png" alt="home"></a>
-          <img id="burger_close_btn" src="images/ico-rnb-close.png" alt="close">
+          <a href="mobile_web.html">
+            <img src="images/ico-rnb-home.png" alt="home">
+          </a>
+          <a href="#" onclick="return false;">
+            <img id="burger_close_btn" src="images/ico-rnb-close.png" alt="close">
+          </a>
         </div>
-        <div class="nav_join"></div>
+        <div class="nav_join">
+          <a href="#">
+            <img src="images/ico-rnb-join.png" alt="join">
+            회원가입
+          </a>
+          <a href="#">
+            <img src="images/ico-rnb-ticketing.png" alt="join">
+            비회원 예매확인
+          </a>
+        </div>
       </div>
       <div class="nav_content"></div>
-      <div class="nav_bottom"></div>
+      <div class="nav_bottom">
+        <img src="images/burger_banner.jpg" alt="burger_banner">
+      </div>
     </nav>
   </div>
 
