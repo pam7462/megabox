@@ -43,9 +43,31 @@
             $('.static_top').css('background-color','rgba(0,0,0,0)');
           }
         });
+
+        $('#close_btn').click(function(){
+          $('.login_form').hide();
+        });
         
       })
     </script>
+
+    <!-- 모바일기본스타일 -->
+    <style>
+      *{
+        box-sizing:border-box;
+      }
+      .container01,.container02{
+        width:100%;
+        padding:0 16px;
+      }
+      .container02{
+        padding:0 0 0 16px;
+      }
+      .static_menu{
+        display:none;
+      }
+    </style>
+
     <!-- 상단하단고정바스타일 -->
     <style>
       .static_top,.static_bottom{
@@ -84,6 +106,74 @@
 
     <!-- login_form스타일 -->
     <style>
+      .login_form,.login_form a{
+        color:#666;
+      }
+      .login_tit::before{
+        content:'';
+        display:block;
+      }
+      .login_tit{
+        display:flex;
+        justify-content:space-between;
+        padding:10px 0;
+        position:fixed;
+        left:0;
+        top:0;
+        width:100%;
+        background-color:white;
+      }
+      .login_tit p{
+        font-size:20px;
+      }
+      .login_tit img{
+        width:26px;
+      }
+      .login_content{
+        padding-top:100px;
+      }
+      .id_pass{
+        width:100%;
+        margin-bottom:20px;
+        border-top:none;
+        border-right:none;
+        border-left:none;
+        border-bottom-color:rgba(0,0,0,0.2);
+        padding:10px 0;
+      }
+      .id_pass::placeholder{
+        color:rgba(0,0,0,0.5);
+      }
+      .id_save{
+        display:flex;
+        margin-bottom:30px;
+      }
+      .id_save>label{
+        display:flex;
+        flex-flow:row nowrap;
+        align-items:center;
+      }
+      .id_save>label>span{
+        font-size:16px;
+      }
+      .id_save>label::before{
+        content:'';
+        width:20px;
+        height:20px;
+        background-image:url(images/bg-m-check-type3.png);
+        background-size:cover;
+        background-position:left;
+        margin-right:10px;
+      }
+      #save_id:checked~label::before{
+        background-position:right;
+      }
+      #save_id{
+        display:none;
+      }
+
+
+
 
     </style>
 
@@ -99,17 +189,7 @@
 </head>
 <body>
 
-  <!-- 모바일기본스타일 -->
-  <style>
-    .container01,.container02{
-      box-sizing:border-box;
-      width:100%;
-      margin:0 16px;
-    }
-    .container02{
-      margin:0 0 0 16px;
-    }
-  </style>
+
 
   <!-- 상단하단고정바 -->
   <div class="static_menu">
@@ -179,11 +259,11 @@
           <img id="close_btn" src="images/ico-close.png" alt="닫기">
         </div>
         <div class="login_content">
-          <input type="text" placeholder="아이디">
-          <input type="password" placeholder="비밀번호">
+          <input class="id_pass" type="text" placeholder="아이디">
+          <input class="id_pass" type="password" placeholder="비밀번호">
           <div class="id_save">
             <input type="checkbox" id="save_id">
-            <label for="save_id">아이디 저장</label>
+            <label for="save_id"><span>아이디 저장</span></label>
           </div>
           <input type="button" value="로그인">
           <ul class="login_search">
