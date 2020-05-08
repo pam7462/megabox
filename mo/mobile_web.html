@@ -26,11 +26,11 @@
     <script>
       $(function(){
         // 로그인폼보기
-        $('#ticket_btn,#alarm_btn').click(function(){
+        $('#ticket_btn,#alarm_btn,#login_txt').click(function(){
           var conFirm=confirm('로그인후 이용가능 합니다.\n로그인 하시겠습니까?');
           console.log(conFirm);
           if(conFirm){
-            $('.static_menu,.wrap').hide();
+            $('.static_menu,.wrap,.burger_menu').hide();
             $('.login_form').show();
           }
         });
@@ -39,6 +39,9 @@
         $('#close_btn').click(function(){
           $('.static_menu,.wrap').show();
           $('.login_form').hide();
+        });
+        $('#burger_close_btn').click(function(){
+          $('.burger_menu').hide();
         });
 
         // 화면스크롤이벤트
@@ -233,11 +236,36 @@
         display:flex;
         justify-content:flex-end;
       }
+     
       .burger_menu nav{
         width:360px;
         height:100%;
         background-color:white;
       }
+      .burger_menu .nav_header{
+        padding:20px;
+        background:gray;
+        display:flex;
+        align-items:center;
+      }
+      .nav_header>p{
+        flex:6;
+        font-size:16px;
+        color:white;
+      }
+      .nav_header>p>span{
+        display:inline-block;
+        text-decoration:underline;
+        cursor:pointer;
+        font-size:16px;
+      }
+      .nav_header>a,.nav_header>img{
+        flex:1;
+      }
+      .nav_header img{
+        width:100%;
+      }
+
 
     </style>
 
@@ -366,7 +394,16 @@
   <!-- 버거메뉴 -->
   <div class="burger_menu">
     <nav>
-
+      <div class="nav_top">
+        <div class="nav_header">
+          <p><span id="login_txt">로그인</span>후 이용하세요</p>
+          <a href="mobile_web.html"><img src="images/ico-rnb-home.png" alt="home"></a>
+          <img id="burger_close_btn" src="images/ico-rnb-close.png" alt="close">
+        </div>
+        <div class="nav_join"></div>
+      </div>
+      <div class="nav_content"></div>
+      <div class="nav_bottom"></div>
     </nav>
   </div>
 
