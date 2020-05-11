@@ -120,7 +120,29 @@
           slidesPerView:'auto',
           spaceBetween:10,
         });
+        //  스몰 무비클립 재생
+        $('#play01').click(function(){
+          location.href="media/movie_clip01.mp4";
+        });
+        $('#play02').click(function(){
+          location.href="media/movie_clip02.mp4";
+        });
+        $('#play03').click(function(){
+          location.href="media/movie_clip03.mp4";
+        });
+        $('#play04').click(function(){
+          location.href="media/movie_clip04.mp4";
+        });
+        $('#play05').click(function(){
+          location.href="media/movie_clip05.mp4";
+        });
 
+        // 영화이벤트 스와이퍼
+        var swiper = new Swiper('.swiper-container04', {
+          slidesPerView:'auto',
+          spaceBetween: 16,
+          freeMode:true,
+        });
       })
     </script>
 
@@ -605,10 +627,64 @@
         color:rgba(255,255,255,0.5);
       }
 
+      .small_movie_clip{
+        padding-top:40px;
+      }
       .swiper-container03 .swiper-slide{
         width:150px;
         color:white;
       }
+      .swiper-container03 .swiper-slide>video{
+        width:100%;
+        height:80px;
+      }
+      .swiper-container03 .swiper-slide>div{
+        display:flex;
+        width:30px;
+        height:30px;
+        font-size:14px;
+        top:42px;
+      }
+      .swiper-container03 .swiper-slide>div.stop_btn{
+        display:none;
+      }
+      .swiper-container03 .swiper-slide>p{
+        padding:0;
+      }
+     
+     /* 메가뉴스 */
+     .mega_news .img{
+       width:100%;
+       margin:10px 0;
+       border-radius:5px;
+       overflow:hidden;
+     }
+     .mega_news .img img{
+       width:100%;
+     }
+
+     /* 메가이벤트 */
+     .swiper-container04 .swiper-slide{
+       width:360px;
+     }
+     .swiper-container04 .swiper-slide .img{
+       border-radius:5px;
+       overflow: hidden;
+       cursor:pointer;
+     }
+     .swiper-container04 .swiper-slide .img img{
+       width:100%;
+     }
+     .swiper-container04 .swiper-slide .event_tit{
+       color:white;
+       font-size:16px;
+       padding:10px 0;
+     }
+     .swiper-container04 .swiper-slide .event_date{
+       color:rgba(255,255,255,0.5);
+       font-weight:100;
+     }
+
     </style>
 
 
@@ -1338,7 +1414,7 @@
               <video width="100%">
                 <source src="media/movie_clip01.mp4">            
               </video>
-              <div class="play_btn active">
+              <div class="play_btn" id="play01">
                 ▶
               </div>
               <div class="stop_btn">
@@ -1353,7 +1429,7 @@
               <video width="100%">
                 <source src="media/movie_clip02.mp4">            
               </video>
-              <div class="play_btn active">
+              <div class="play_btn" id="play02">
                 ▶
               </div>
               <div class="stop_btn">
@@ -1368,7 +1444,7 @@
               <video width="100%">
                 <source src="media/movie_clip03.mp4">            
               </video>
-              <div class="play_btn active">
+              <div class="play_btn" id="play03">
                 ▶
               </div>
               <div class="stop_btn">
@@ -1383,7 +1459,7 @@
               <video width="100%">
                 <source src="media/movie_clip04.mp4">            
               </video>
-              <div class="play_btn active">
+              <div class="play_btn" id="play04">
                 ▶
               </div>
               <div class="stop_btn">
@@ -1398,7 +1474,7 @@
               <video width="100%">
                 <source src="media/movie_clip05.mp4">            
               </video>
-              <div class="play_btn active">
+              <div class="play_btn" id="play05">
                 ▶
               </div>
               <div class="stop_btn">
@@ -1412,6 +1488,124 @@
           </div>
         </div>
       </article>
+      <div class="container01">
+        <hr>
+      </div>
+    </section>
+    <section class="section mega_news">
+      <article class="container01">
+        <h2>메가박스 소식</h2>
+        <div class="img">
+          <a href="#">
+            <img src="images/mega_news01.jpg" alt="메가뉴스01">
+          </a>
+        </div>
+        <div class="img">
+          <a href="#">
+            <img src="images/mega_news02.jpg" alt="메가뉴스02">
+          </a>
+        </div>
+        <div class="img">
+          <a href="#">
+            <img src="images/mega_news03.jpg" alt="메가뉴스03">
+          </a>
+        </div>
+        <div class="img">
+          <a href="#">
+            <img src="images/mega_news04.jpg" alt="메가뉴스04">
+          </a>
+        </div>
+      </article>
+      <div class="container01">
+        <hr>
+      </div> 
+    </section>
+    <section class="section movie_event">
+      <h2 class="container01">영화 이벤트</h2>
+      <div class="swiper-container04">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img01.jpg" alt="이벤트01">
+            </div>
+            <p class="event_tit">호소다 마모루 기획전</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img02.jpg" alt="이벤트02">
+            </div>
+            <p class="event_tit">20세기 폭스 리플레이</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img03.jpg" alt="이벤트03">
+            </div>
+            <p class="event_tit">[이별의 아침에 약속의 꽃을 장식하자] 스페..</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img04.jpg" alt="이벤트04">
+            </div>
+            <p class="event_tit">[트롤:월드 투어]2주차 현장 경품 이벤트</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img05.jpg" alt="이벤트05">
+            </div>
+            <p class="event_tit">[저 산 너머] 개봉기념 현장 할인 이벤트</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img06.jpg" alt="이벤트06">
+            </div>
+            <p class="event_tit">[톰보이] 필름 소사이어티 굿즈 패키지 상영회</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img07.jpg" alt="이벤트07">
+            </div>
+            <p class="event_tit">[레이니 데이 인 뉴욕] 로즈데이 로맨틱...</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img08.jpg" alt="이벤트08">
+            </div>
+            <p class="event_tit">[범털] 굿즈패키지 상영회</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img09.jpg" alt="이벤트09">
+            </div>
+            <p class="event_tit">클래식 소사이어티 오페라[마산 지점]...</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img10.jpg" alt="이벤트10">
+            </div>
+            <p class="event_tit">[레이니 데이 인 뉴욕] 현장 경품 이벤트</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
+              <img src="images/event_img11.jpg" alt="이벤트11">
+            </div>
+            <p class="event_tit">[킹 오브 프리즘 올스타즈-프리즘 쇼...</p>
+            <p class="event_date">2020-05-14~2020-06-03</p>
+          </div>
+        </div>
+      </div>
+      <div class="container01">
+        <hr>
+      </div>
     </section>
   </div>
 </body>
