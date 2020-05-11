@@ -78,6 +78,25 @@
           $(this).children().children('.bnb01').css('display','none');
         });
 
+        // 메인메뉴 스와이퍼
+        var swiper = new Swiper('.swiper-container.main_menu', {
+          slidesPerView:'auto',
+          spaceBetween: 30,
+          freeMode:true,
+        });
+
+        // 메인메뉴 클릭이벤트
+        $('.main_menu .swiper-slide a').click(function(){
+          $('.main_menu .swiper-slide a').removeClass('active');
+          $(this).addClass('active');
+        });
+
+        // 메인포스터 스와이퍼
+        var swiper = new Swiper('.swiper-container.main_poster', {
+          slidesPerView:'auto',
+          spaceBetween: 30,
+        });
+
       })
     </script>
 
@@ -89,8 +108,6 @@
       body{
         overflow:scroll;
         -ms-overflow-style:none;
-        /* 나중에 지울것 */
-        overflow:hidden;
       }
       body::-webkit-scrollbar{
         display:none;
@@ -102,6 +119,13 @@
       }
       .container02{
         padding:0 0 0 16px;
+      }
+
+      h2{
+        font-weight:100;
+        font-size:28px;
+        color:white;
+        line-height:40px;
       }
       
     </style>
@@ -427,8 +451,27 @@
     <style>
       .wrap{
         padding-top:63px;
+        padding-bottom:76px;
         background:purple;
       }
+      .main_menu{
+        padding:40px 0 20px;
+      }
+      .main_menu .swiper-slide{
+        width:auto;
+      }
+      .main_menu .swiper-slide a{
+        color:rgba(255,255,255,0.5);
+      }
+      .main_menu .swiper-slide a.active{
+        color:rgba(255,255,255,1);
+        text-decoration:underline;
+      }
+
+      .main_poster .swiper-slide{
+        width:200px;
+      }
+
     </style>
 
 
@@ -664,61 +707,406 @@
           이 어려움도 이겨낼 거예요!
         </h2>
         <div class="swiper-container main_menu">
-          <div class="swiper-wraper">
+          <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <p>#박스오피스</p>
+              <a href="#" class="active">#박스오피스</a>
             </div>
             <div class="swiper-slide">
-              <p>#예정작</p>
+              <a href="#">#예정작</a>
             </div>
             <div class="swiper-slide">
-              <p>#단독</p>
+              <a href="#">#단독</a>
             </div>
             <div class="swiper-slide">
-              <p>#명작리플레이</p>
+              <a href="#">#명작리플레이</a>
             </div>
             <div class="swiper-slide">
-              <p>#필소</p>
+              <a href="#">#필소</a>
             </div>
             <div class="swiper-slide">
-              <p>#클소</p>
+              <a href="#">#클소</a>
             </div>
             <div class="swiper-slide">
-              <p>#폭스리플레이</p>
+              <a href="#">#폭스리플레이</a>
             </div>
           </div>
         </div>
         <div class="swiper-container main_poster">
-          <div class="swiper-container">
-            <div class="swiper-slide">
-              그림1
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide00">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster00.jpg" alt="포스터00">
+                  <p><span class="age">12</span><span>톰보이</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>17.6%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-3</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>205</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  1
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림2
+            <div class="swiper-slide swiper-slide01">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster01.jpg" alt="포스터01">
+                  <p><span class="age">All</span><span>트롤:월드 투어</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>12.4%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D+2</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>503</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  2
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림3
+            <div class="swiper-slide swiper-slide02">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster02.jpg" alt="포스터02">
+                  <p><span class="age">12</span><span>레이니 데이 인 뉴욕</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>9.5%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-3</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>95</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  3
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림4
+            <div class="swiper-slide swiper-slide03">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster03.jpg" alt="포스터03">
+                  <p><span class="age">15</span><span>패왕별희 디 오리지널</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>9.5%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-3</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>854</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  4
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림5
+            <div class="swiper-slide swiper-slide04">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster04.jpg" alt="포스터04">
+                  <p><span class="age">12</span><span>프리즌 이스케이프</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>5.3%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-2</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>428</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  5
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림6
+            <div class="swiper-slide swiper-slide05">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster05.jpg" alt="포스터05">
+                  <p><span class="age">12</span><span>레미제라블:뮤지컬 콘서트</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>5.3%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-2</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>429</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  6
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림7
+            <div class="swiper-slide swiper-slide06">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster06.jpg" alt="포스터06">
+                  <p><span class="age">All</span><span>[오페라]마담 버터클라..</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>3.2%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D+5</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>28</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  7
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림8
+            <div class="swiper-slide swiper-slide07">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster07.jpg" alt="포스터07">
+                  <p><span class="age">12</span><span>저 산 너머</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>3.2%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D+4</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>84</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  8
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림9
+            <div class="swiper-slide swiper-slide08">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster08.jpg" alt="포스터08">
+                  <p><span class="age">12</span><span>[오페라]리골레토</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>3.1%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-3</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>259</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  9
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              그림10
+            <div class="swiper-slide swiper-slide09">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster09.jpg" alt="포스터09">
+                  <p><span class="age">12</span><span>라라랜드</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>17.6%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-3</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>205</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  10
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide10">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster10.jpg" alt="포스터10">
+                  <p><span class="age">15</span><span>날씨의 아이</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>1.8%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-1</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>5</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  11
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide11">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster11.jpg" alt="포스터11">
+                  <p><span class="age">12</span><span>이별의 아침에 약속의 꽃..</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>1.8%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D+9</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>85</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  12
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide12">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster12.jpg" alt="포스터12">
+                  <p><span class="age">18</span><span>[오페라]피델리오</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>1.8%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-3</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>21</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  13
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide13">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster13.jpg" alt="포스터13">
+                  <p><span class="age">18</span><span>1917</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>17.6%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-3</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>205</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  14
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide14">
+              <div class="main_poster_content">
+                <a href="#">
+                  <img src="images/main_poster14.jpg" alt="포스터14">
+                  <p><span class="age">12</span><span>나의 청춘은 너의 것</span></p>
+                </a>
+                <ul>
+                  <li>
+                    <span>예매율</span>
+                    <p>1.7%</p>
+                  </li>
+                  <li>
+                    <span>개봉일</span>
+                    <p>D-0</p>
+                  </li>
+                  <li>
+                    <span>보고싶어</span>
+                    <p>290</p>
+                  </li>
+                </ul>
+                <div class="poster_num">
+                  15
+                </div>
+              </div>
             </div>
           </div>
         </div>
