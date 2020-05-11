@@ -97,18 +97,28 @@
           spaceBetween:30,
         });
 
+        // 랜덤 무비
+        $('.movie_clip').removeClass('active');
+        var ranNum=Math.random();
+        if(ranNum<=0.2){
+          $('.movie_clip').eq(0).addClass('active');
+        }else if(ranNum<=0.4){
+          $('.movie_clip').eq(1).addClass('active');
+        }else if(ranNum<=0.6){
+          $('.movie_clip').eq(2).addClass('active');
+        }else if(ranNum<=0.8){
+          $('.movie_clip').eq(3).addClass('active');
+        }else{
+          $('.movie_clip').eq(4).addClass('active');
+        }
+
         // 연령색
-        var video=document.querySelector('video');
-        $('.play_btn').click(function(){
-          video.play();
-          $(this).toggleClass('active');
-          $('.stop_btn').toggleClass('active');
-          
-        });
-        $('.stop_btn').click(function(){
-          video.pause();
-          $(this).toggleClass('active');
-          $('.play_btn').toggleClass('active');
+        // 무비 플래이 스톱
+       
+        // 스몰 무비클립 스와이퍼
+        var swiper = new Swiper('.swiper-container03', {
+          slidesPerView:'auto',
+          spaceBetween:10,
         });
 
       })
@@ -559,6 +569,10 @@
       /* 무비클립 스타일 */
       .movie_clip{
         position:relative;
+        display:none;
+      }
+      .movie_clip.active{
+        display:block;
       }
       .play_btn,.stop_btn{
         position:absolute;
@@ -580,6 +594,20 @@
       }
       .movie_clip>div.active{
         display:flex;
+      }      
+      .movie_clip_txt>span:first-child{
+        font-size:18px;
+        color:white;
+        margin:10px 0;
+      }
+      .movie_clip_txt>span:last-child{
+        font-weight:100;
+        color:rgba(255,255,255,0.5);
+      }
+
+      .swiper-container03 .swiper-slide{
+        width:150px;
+        color:white;
       }
     </style>
 
@@ -1227,7 +1255,7 @@
     <section class="section hot_clip">
       <article>
         <h2 class="container01">핫클립</h2>
-        <div class="movie_clip">
+        <div class="movie_clip active">
           <video width="100%">
             <source src="media/movie_clip01.mp4">            
           </video>
@@ -1236,6 +1264,151 @@
           </div>
           <div class="stop_btn">
             ||
+          </div>
+          <p class="container01 movie_clip_txt">
+            <span>침입자</span>
+            <span>절대로 피할수 없다.</span>
+          </p>
+        </div>
+        <div class="movie_clip">
+          <video width="100%">
+            <source src="media/movie_clip02.mp4">            
+          </video>
+          <div class="play_btn active">
+            ▶
+          </div>
+          <div class="stop_btn">
+            ||
+          </div>
+          <p class="container01 movie_clip_txt">
+            <span>도망자</span>
+            <span>절대로 도망갈수 없다.</span>
+          </p>
+        </div>
+        <div class="movie_clip">
+          <video width="100%">
+            <source src="media/movie_clip03.mp4">            
+          </video>
+          <div class="play_btn active">
+            ▶
+          </div>
+          <div class="stop_btn">
+            ||
+          </div>
+          <p class="container01 movie_clip_txt">
+            <span>토르</span>
+            <span>토르의 망치를 찾아서.</span>
+          </p>
+        </div>
+        <div class="movie_clip">
+          <video width="100%">
+            <source src="media/movie_clip04.mp4">            
+          </video>
+          <div class="play_btn active">
+            ▶
+          </div>
+          <div class="stop_btn">
+            ||
+          </div>
+          <p class="container01 movie_clip_txt">
+            <span>아이언맨</span>
+            <span>골프는 아이언이 중요하다.</span>
+          </p>
+        </div>
+        <div class="movie_clip">
+          <video width="100%">
+            <source src="media/movie_clip05.mp4">            
+          </video>
+          <div class="play_btn active">
+            ▶
+          </div>
+          <div class="stop_btn">
+            ||
+          </div>
+          <p class="container01 movie_clip_txt">
+            <span>경쟁자</span>
+            <span>절대로 나를 이길수는 없다.</span>
+          </p>
+        </div>
+      </article>
+      <article class="small_movie_clip container02">
+        <div class="swiper-container03">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video width="100%">
+                <source src="media/movie_clip01.mp4">            
+              </video>
+              <div class="play_btn active">
+                ▶
+              </div>
+              <div class="stop_btn">
+                ||
+              </div>
+              <p class="container01 movie_clip_txt">
+                <span>침입자</span>
+                <span>절대로 피할수 없다.</span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <video width="100%">
+                <source src="media/movie_clip02.mp4">            
+              </video>
+              <div class="play_btn active">
+                ▶
+              </div>
+              <div class="stop_btn">
+                ||
+              </div>
+              <p class="container01 movie_clip_txt">
+                <span>도망자</span>
+                <span>절대로 도망갈수 없다.</span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <video width="100%">
+                <source src="media/movie_clip03.mp4">            
+              </video>
+              <div class="play_btn active">
+                ▶
+              </div>
+              <div class="stop_btn">
+                ||
+              </div>
+              <p class="container01 movie_clip_txt">
+                <span>토르</span>
+                <span>토르의 망치를 찾아서.</span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <video width="100%">
+                <source src="media/movie_clip04.mp4">            
+              </video>
+              <div class="play_btn active">
+                ▶
+              </div>
+              <div class="stop_btn">
+                ||
+              </div>
+              <p class="container01 movie_clip_txt">
+                <span>아이언맨</span>
+                <span>골프는 아이언이 중요하다.</span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <video width="100%">
+                <source src="media/movie_clip05.mp4">            
+              </video>
+              <div class="play_btn active">
+                ▶
+              </div>
+              <div class="stop_btn">
+                ||
+              </div>
+              <p class="container01 movie_clip_txt">
+                <span>경쟁자</span>
+                <span>절대로 나를 이길수는 없다.</span>
+              </p>
+            </div>
           </div>
         </div>
       </article>
