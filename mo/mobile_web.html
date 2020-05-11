@@ -70,7 +70,14 @@
         $('#toggle_btn').click(function(){
           $('.burger_menu').css('display','flex');
         });
-        
+
+        $('.static_bottom_btn').click(function(){
+          $('.bnb02').css('display','none');
+          $(this).children().children('.bnb02').css('display','block');
+          $('.bnb01').css('display','block');
+          $(this).children().children('.bnb01').css('display','none');
+        });
+
       })
     </script>
 
@@ -132,7 +139,24 @@
       }
       .static_bottom{
         bottom:0;
+        justify-content:space-around;
+        background-color:#333333;
       }
+      .static_bottom>li>a>img:nth-child(2){
+        display:none;
+      }
+      .static_bottom>li{
+        text-align:center;
+      }
+      .static_bottom>li>a{
+        font-weight:100;
+        font-size:12px;
+        color:rgba(255,255,255,0.5);
+      }
+      .static_bottom>li>a>img{
+        width:30px;
+      }
+      
     </style>
 
     <!-- login_form스타일 -->
@@ -402,7 +426,7 @@
     <!-- wrap스타일 -->
     <style>
       .wrap{
-        height:1000px;
+        padding-top:63px;
         background:purple;
       }
     </style>
@@ -411,8 +435,6 @@
   <title>라이프시어터</title>
 </head>
 <body>
-
-
 
   <!-- 상단하단고정바 -->
   <div class="static_menu">
@@ -435,38 +457,38 @@
       </li>
     </ul>
     <ul class="static_bottom">
-      <li>
+      <li class="static_bottom_btn">
         <a href="#">
-          <img src="images/ico-bnb-movie.png" alt="movie">
-          <img src="images/ico-bnb-movie-on.png" alt="movie-on">
+          <img class="bnb01" src="images/ico-bnb-movie.png" alt="movie">
+          <img class="bnb02" src="images/ico-bnb-movie-on.png" alt="movie-on">
           <p>예매</p>
         </a>
       </li>
-      <li>
+      <li class="static_bottom_btn">
         <a href="#">
-          <img src="images/ico-bnb-store.png" alt="store">
-          <img src="images/ico-bnb-store-on.png" alt="store-on">
+          <img class="bnb01" src="images/ico-bnb-store.png" alt="store">
+          <img class="bnb02" src="images/ico-bnb-store-on.png" alt="store-on">
           <p>스토어</p>
         </a>
       </li>
-      <li>
+      <li class="static_bottom_btn">
         <a href="#">
-          <img src="images/ico-bnb-reserve.png" alt="reserve">
-          <img src="images/ico-bnb-reserve-on.png" alt="reserve-on">
+          <img class="bnb01" src="images/ico-bnb-reserve.png" alt="reserve">
+          <img class="bnb02" src="images/ico-bnb-reserve-on.png" alt="reserve-on">
           <p>영화</p>
         </a>
       </li>
-      <li>
+      <li class="static_bottom_btn">
         <a href="#">
-          <img src="images/ico-bnb-event.png" alt="event">
-          <img src="images/ico-bnb-event-on.png" alt="event-on">
+          <img class="bnb01" src="images/ico-bnb-event.png" alt="event">
+          <img class="bnb02" src="images/ico-bnb-event-on.png" alt="event-on">
           <p>이벤트</p>
         </a>
       </li>
-      <li>
+      <li class="static_bottom_btn">
         <a href="#">
-          <img src="images/ico-bnb-mymega.png" alt="mymega">
-          <img src="images/ico-bnb-mymega-on.png" alt="mymega-on">
+          <img class="bnb01" src="images/ico-bnb-mymega.png" alt="mymega">
+          <img class="bnb02" src="images/ico-bnb-mymega-on.png" alt="mymega-on">
           <p>MY</p>
         </a>
       </li>
@@ -635,7 +657,73 @@
 
   <!-- 본문 -->
   <div class="wrap">
-
+    <section class="section main">
+      <article class="container02">
+        <h2>
+          당신은 영화속 주인공처럼<br>
+          이 어려움도 이겨낼 거예요!
+        </h2>
+        <div class="swiper-container main_menu">
+          <div class="swiper-wraper">
+            <div class="swiper-slide">
+              <p>#박스오피스</p>
+            </div>
+            <div class="swiper-slide">
+              <p>#예정작</p>
+            </div>
+            <div class="swiper-slide">
+              <p>#단독</p>
+            </div>
+            <div class="swiper-slide">
+              <p>#명작리플레이</p>
+            </div>
+            <div class="swiper-slide">
+              <p>#필소</p>
+            </div>
+            <div class="swiper-slide">
+              <p>#클소</p>
+            </div>
+            <div class="swiper-slide">
+              <p>#폭스리플레이</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container main_poster">
+          <div class="swiper-container">
+            <div class="swiper-slide">
+              그림1
+            </div>
+            <div class="swiper-slide">
+              그림2
+            </div>
+            <div class="swiper-slide">
+              그림3
+            </div>
+            <div class="swiper-slide">
+              그림4
+            </div>
+            <div class="swiper-slide">
+              그림5
+            </div>
+            <div class="swiper-slide">
+              그림6
+            </div>
+            <div class="swiper-slide">
+              그림7
+            </div>
+            <div class="swiper-slide">
+              그림8
+            </div>
+            <div class="swiper-slide">
+              그림9
+            </div>
+            <div class="swiper-slide">
+              그림10
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
   </div>
 </body>
 </html>
