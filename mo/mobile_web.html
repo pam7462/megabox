@@ -21,495 +21,24 @@
     <!-- swiper -->
     <link rel="stylesheet" href="../css/swiper.min.css">
     <script src="../js/swiper.min.js"></script>
+
+    <script src="js/mo.js"></script>
+
+
     <!-- reset -->
     <link rel="stylesheet" href="../css/reset.css">
-    <script>
-      $(function(){
-        // 로그인폼보기
-        $('#ticket_btn,#alarm_btn,#login_txt').click(function(){
-          var conFirm=confirm('로그인후 이용가능 합니다.\n로그인 하시겠습니까?');
-          console.log(conFirm);
-          if(conFirm){
-            $('.static_menu,.wrap,.burger_menu').hide();
-            $('.login_form').show();
-          }
-        });
-
-        // 로그인폼닫기
-        $('#close_btn').click(function(){
-          $('.static_menu,.wrap').show();
-          $('.login_form').hide();
-        });
-        $('#burger_close_btn').click(function(){
-          $('.burger_menu').hide();
-        });
-
-        // 화면스크롤이벤트
-        $(window).scroll(function(){
-          var scrTop=$(window).scrollTop();
-          console.log(scrTop);
-          if(scrTop>30){
-            $('.static_top').css('background-color','rgba(0,0,0,0.9)');
-          }else{
-            $('.static_top').css('background-color','rgba(0,0,0,0)');
-          }
-        });
-
-        // 서브멤버 토글
-        $('#member_btn').click(function(){
-          $('.member_sub').toggle();
-          var tmp=$('.member_sub').css('display');
-          if(tmp=='block'){
-            $('.center').addClass('active_padding');
-          }else{
-            $('.center').removeClass('active_padding');
-          }
-        });
-        
-        // 햄버거메뉴
-        $('#toggle_btn').click(function(){
-          $('.burger_menu').css('display','flex');
-        });
-
-        $('.static_bottom_btn').click(function(){
-          $('.bnb02').css('display','none');
-          $(this).children().children('.bnb02').css('display','block');
-          $('.bnb01').css('display','block');
-          $(this).children().children('.bnb01').css('display','none');
-        });
-
-        // 메인메뉴 스와이퍼
-        var swiper = new Swiper('.swiper-container.main_menu', {
-          slidesPerView:'auto',
-          spaceBetween: 30,
-          freeMode:true,
-        });
-
-        // 메인메뉴 클릭이벤트
-        $('.main_menu .swiper-slide a').click(function(){
-          $('.main_menu .swiper-slide a').removeClass('active');
-          $(this).addClass('active');
-        });
-
-        // 메인포스터 스와이퍼
-        var swiper = new Swiper('.swiper-container.main_poster', {
-          slidesPerView:'auto',
-          spaceBetween:30,
-        });
-
-        // 랜덤 무비
-        $('.movie_clip').removeClass('active');
-        var ranNum=Math.random();
-        if(ranNum<=0.2){
-          $('.movie_clip').eq(0).addClass('active');
-        }else if(ranNum<=0.4){
-          $('.movie_clip').eq(1).addClass('active');
-        }else if(ranNum<=0.6){
-          $('.movie_clip').eq(2).addClass('active');
-        }else if(ranNum<=0.8){
-          $('.movie_clip').eq(3).addClass('active');
-        }else{
-          $('.movie_clip').eq(4).addClass('active');
-        }
-
-        // 연령색
-        // 무비 플래이 스톱
-       
-        // 스몰 무비클립 스와이퍼
-        var swiper = new Swiper('.swiper-container.swiper-container03', {
-          slidesPerView:'auto',
-          spaceBetween:10,
-        });
-        //  스몰 무비클립 재생
-        $('#play01').click(function(){
-          location.href="media/movie_clip01.mp4";
-        });
-        $('#play02').click(function(){
-          location.href="media/movie_clip02.mp4";
-        });
-        $('#play03').click(function(){
-          location.href="media/movie_clip03.mp4";
-        });
-        $('#play04').click(function(){
-          location.href="media/movie_clip04.mp4";
-        });
-        $('#play05').click(function(){
-          location.href="media/movie_clip05.mp4";
-        });
-
-        // 영화이벤트 스와이퍼
-        var swiper = new Swiper('.swiper-container.swiper-container04', {
-          slidesPerView:'auto',
-          spaceBetween: 16,
-          freeMode:true,
-        });
-
-        // 무비포스트 스와이퍼
-        var swiper = new Swiper('.swiper-container.swiper-container05', {
-          slidesPerView:'auto',
-          spaceBetween:8,
-          freeMode:true,
-        });
-
-      })
-    </script>
 
     <!-- 모바일기본스타일 -->
-    <style>
-      *{
-        box-sizing:border-box;
-      }
-      body{
-        overflow:scroll;
-        -ms-overflow-style:none;
-      }
-      body::-webkit-scrollbar{
-        display:none;
-      }
-      
-      .container01,.container02{
-        width:100%;
-        padding:0 16px;
-      }
-      .container02{
-        padding:0 0 0 16px;
-      }
-
-      h2{
-        font-weight:100;
-        font-size:28px;
-        color:white;
-        line-height:40px;
-      }
-      .section{
-        padding:40px 0;
-      }
-      hr{
-        width:100%;
-        height:1px;
-        background-color:rgba(255,255,255,0.5);
-      }
-      
-    </style>
-
+    <link rel="stylesheet" href="css/mo_basic.css">
     <!-- 상단하단고정바스타일 -->
-    <style>
-      .static_top,.static_bottom{
-       position:fixed;
-       left:0;
-       z-index:9999;
-       display:flex;
-       justify-content:space-between;
-       box-sizing:border-box;
-       width:100%;
-       padding:16px;       
-
-      }
-      .static_top{
-        top:0;
-        padding-bottom:3px;
-        transition:0.1s;
-      }
-      .static_top>li:nth-child(1){
-        width:30px;
-      }
-      .static_top>li:nth-child(2){
-        margin-top:-12px;
-        width:120px;
-      }
-      .static_top>li:nth-child(3) img{
-        width:30px;
-      }
-      .static_top>li img{
-        width:100%;
-      }
-      .static_bottom{
-        bottom:0;
-        justify-content:space-around;
-        background-color:#333333;
-      }
-      .static_bottom>li>a>img:nth-child(2){
-        display:none;
-      }
-      .static_bottom>li{
-        text-align:center;
-      }
-      .static_bottom>li>a{
-        font-weight:100;
-        font-size:12px;
-        color:rgba(255,255,255,0.5);
-      }
-      .static_bottom>li>a>img{
-        width:30px;
-      }
-      
-    </style>
-
+    <link rel="stylesheet" href="css/top_bottom_bar.css">
     <!-- login_form스타일 -->
-    <style>
-      .login_form{
-        display:none;
-        position:absolute;
-        left:0;
-        top:0;
-        width:100%;
-        z-index:10000;
-        background-color:white;
-      }
-      .login_form,.login_form a{
-        color:#666;
-      }
-      .login_tit::before{
-        content:'';
-        display:block;
-      }
-      .login_tit{
-        display:flex;
-        justify-content:space-between;
-        padding:10px 0;
-        position:fixed;
-        left:0;
-        top:0;
-        width:100%;
-        background-color:white;
-      }
-      .login_tit p{
-        font-size:20px;
-      }
-      .login_tit img{
-        width:26px;
-      }
-      .login_content{
-        padding-top:100px;
-      }
-      .id_pass{
-        width:100%;
-        margin-bottom:20px;
-        border-top:none;
-        border-right:none;
-        border-left:none;
-        border-bottom-color:rgba(0,0,0,0.2);
-        padding:10px 0;
-      }
-      .id_pass::placeholder{
-        color:rgba(0,0,0,0.5);
-      }
-      .id_save{
-        display:flex;
-        margin-bottom:30px;
-      }
-      .id_save>label{
-        display:flex;
-        flex-flow:row nowrap;
-        align-items:center;
-      }
-      .id_save>label>span{
-        font-size:16px;
-      }
-      .id_save>label::before{
-        content:'';
-        width:20px;
-        height:20px;
-        background-image:url(images/bg-m-check-type3.png);
-        background-size:cover;
-        background-position:left;
-        margin-right:10px;
-      }
-      #save_id:checked~label::before{
-        background-position:right;
-      }
-      #save_id{
-        display:none;
-      }
-      input[value="로그인"]{
-        width:100%;
-        border:none;
-        padding:16px;
-        background-color:#6437bf;
-        color:white;
-        font-size:18px;
-        cursor:pointer;
-      }
-      .login_search,.login_sns{
-        width:50%;
-        margin:30px auto;
-        display:flex;
-        justify-content:space-between;
-      }
-      .login_sns>li{
-        width:40px;
-      }
-      .login_sns img{
-        width:100%;
-      }
-
-
-
-
-    </style>
-
+    <link rel="stylesheet" href="css/login_form.css">
     <!-- 버거메뉴 스타일 -->
-    <style>
-      .burger_menu{
-        overflow:scroll;
-        -ms-overflow-style:none;
-        position:fixed;
-        left:0;
-        top:0;
-        z-index:10000;
-        width:100%;
-        height:100%;
-        background:rgba(0,0,0,0.5);
-        display:none;
-        justify-content:flex-end;
-      }
-      .burger_menu::-webkit-scrollbar{
-        display:none;
-      }
-     
-      .burger_menu nav{
-        width:360px;
-        height:100%;
-        background-color:white;
-      }
-      .nav_top{
-        position:fixed;
-        right:0;
-        top:0;
-        width:360px;
-        background:#160f2b;
-      }
-      .nav_header,.nav_join{
-        padding:10px 20px 30px;
-        display:flex;
-        align-items:center;
-      }
-      .nav_header>p{
-        flex:8;
-        font-size:16px;
-        color:white;
-      }
-      .nav_header>p>span{
-        display:inline-block;
-        text-decoration:underline;
-        cursor:pointer;
-        font-size:16px;
-      }
-      .nav_header>a{
-        flex:1;
-      }
-      .nav_header img{
-        width:100%;
-      }
-      .nav_join{
-        border-top:1px solid rgba(255,255,255,0.5);
-        padding:16px 0;
-      }
-      .nav_join>a{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        color:rgba(255,255,255,0.5);
-      }
-      .nav_join>a>img{
-        width:16px;
-        margin-right:10px;
-      }
-      .nav_join>a:nth-child(1){
-        flex:2;
-      }
-      .nav_join>a:nth-child(2){
-        flex:3;
-      }
-      .nav_bottom{
-        position:fixed;
-        right:0;
-        bottom:0;
-        width:360px;
-      }
-      .nav_bottom img{
-        width:100%;
-      }
-      .nav_content{
-        padding:130px 0px 114px;
-        background-color:white;
-      }
-      .nav_quick_icon{
-        display:flex;
-        flex-flow:row wrap;
-      }
-      .nav_quick_icon>li{
-        width:33.33333333333333%;
-        padding:20px 0;
-        text-align:center;
-      }
-      .nav_quick_icon>li img{
-        width:60px;
-        margin-bottom:6px;
-        border:1px solid rgba(0,0,0,0.2);
-        border-radius:50%;
-        padding:10px;
-      }
-      .nav_list{
-        background-color:white;
-      }
-      .nav_list>li{
-        border-top:1px solid rgba(0,0,0,0.2);
-        padding:16px;
-      }
-      .nav_list a{
-        display:inline-block;
-        color:rgba(0,0,0,0.8);
-        width:100%;
-        height:100%;
-      }
-      #member_btn{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-      }
-      #member_btn::after{
-        content:'';
-        display:block;
-        width:20px;
-        height:20px;
-        background-image:url('images/ico-updown-off.png');
-        background-size:cover;
-      }
-      .member_main{
-        position:relative;
-      }
-      .member_sub{
-        position:absolute;
-        left:0;
-        top:100%;
-        width:100%;
-        display:none;
-        padding:10px;
-        background-color:#ccc;
-      }
-      .member_sub>li{
-        padding:10px 0;
-      }
-      .nav_list>li:last-child>a{
-        color:#14b9cb;
-        display:flex;
-        align-items:center;
-      }
-      .nav_list>li:last-child>a::before{
-        content:'';
-        display:inline-block;
-        width:20px;
-        height:20px;
-        background-image:url('images/ico-rnb-notice.png');
-        background-size:cover;
-      }
-      .active_padding{
-        padding-top:138px !important;
-      }
-    </style>
+    <link rel="stylesheet" href="css/burger.css">
 
     <!-- wrap스타일 -->
+    <link rel="stylesheet" href="css/wrap.css">
     <style>
       .wrap{
         padding-top:63px;
@@ -519,7 +48,7 @@
       .main_poster .swiper-slide::after{
         content:'바로예매';
         display:block;
-        margin:10px 0 30px;
+        margin:10px 0 0;
         border-radius:5px;
         padding:14px;
         background-color:#55aaaa;
@@ -673,7 +202,13 @@
 
      /* 메가이벤트 */
      .swiper-container04 .swiper-slide{
-       width:360px;
+       width:328px;
+     }
+     .swiper-container04 .swiper-slide:first-child{
+       margin-left:16px;
+     }
+     .swiper-container04 .swiper-slide:last-child{
+       margin-right:16px;
      }
      .swiper-container04 .swiper-slide .img{
        border-radius:5px;
@@ -686,11 +221,13 @@
      .swiper-container04 .swiper-slide .event_tit{
        color:white;
        font-size:16px;
-       padding:10px 0;
+       padding:10px 16px;
+
      }
      .swiper-container04 .swiper-slide .event_date{
        color:rgba(255,255,255,0.5);
        font-weight:100;
+       padding:0 16px;
      }
 
      /* 특별관  */
@@ -765,6 +302,12 @@
     .movie_post .swiper-slide{
       width:160px;
     }
+    .movie_post .swiper-slide:first-child{
+      margin-left:16px;
+    }
+    .movie_post .swiper-slide:last-child{
+      margin-right:16px;
+    }
     .movie_post_content{
       border-radius:5px;
       overflow: hidden;
@@ -798,14 +341,14 @@
       color:rgba(255,255,255,0.5);
     }
     .footer{
-      padding:20px;
+      padding:20px 0;
       background-color:#222222;
       color:rgba(255,255,255,0.5);
     }
     .footer_menu{
       display:flex;
       justify-content:center;
-      margin:10px;
+      margin:10px 0;
     }
     .footer_menu li{
       position:relative;
@@ -1797,112 +1340,112 @@
           나만의 무비포스트를 남겨보세요.
         </p>
       </div>
-      <div class="container02">
-        <div class="swiper-container swiper-container05">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img01.jpg" alt="post01">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+      
+      <div class="swiper-container swiper-container05">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img01.jpg" alt="post01">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img02.jpg" alt="post02">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img02.jpg" alt="post02">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img03.jpg" alt="post03">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img03.jpg" alt="post03">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img04.jpg" alt="post04">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img04.jpg" alt="post04">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img05.jpg" alt="post05">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img05.jpg" alt="post05">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img05.jpg" alt="post05">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img05.jpg" alt="post05">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img07.jpg" alt="post07">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img07.jpg" alt="post07">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img08.jpg" alt="post08">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img08.jpg" alt="post08">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img09.jpg" alt="post09">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img09.jpg" alt="post09">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-            <div class="swiper-slide">
-              <div class="movie_post_content">
-                <div class="post_img">
-                  <img src="images/post_img10.jpg" alt="post10">
-                </div>
-                <p class="post_id">pam74**</p>
-                <p class="post_tit">날씨의아이</p>
-                <p class="post_txt">ㄲㅈ</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="movie_post_content">
+              <div class="post_img">
+                <img src="images/post_img10.jpg" alt="post10">
               </div>
+              <p class="post_id">pam74**</p>
+              <p class="post_tit">날씨의아이</p>
+              <p class="post_txt">ㄲㅈ</p>
             </div>
-          </div>          
-        </div>        
-      </div>      
+          </div>
+        </div>          
+      </div>        
+            
     </section>
     <footer class="footer">
       <ul class="footer_menu">
