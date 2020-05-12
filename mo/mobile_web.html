@@ -143,6 +143,14 @@
           spaceBetween: 16,
           freeMode:true,
         });
+
+        // 무비포스트 스와이퍼
+        var swiper = new Swiper('.swiper-container.swiper-container05', {
+          slidesPerView:'auto',
+          spaceBetween:8,
+          freeMode:true,
+        });
+
       })
     </script>
 
@@ -718,6 +726,78 @@
     .special_list a p{
       font-size:12px;
     }
+
+    /* 무비포스트 */
+    .movie_post h2{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:20px;
+    }
+    .movie_post h2::after{
+      content:'';
+      display:block;
+      width:24px;
+      height:24px;
+      margin-top:8px;
+      background-image:url('images/ico-main-spritex2.png');
+      background-size:334px 192px;
+      background-position:-1px -50px;
+      background-color:#333333;
+      border-radius:50%;
+    }
+    .movie_post .movie_post_txt{
+      display:flex;
+      justify-content:space-between;
+      color:rgba(255,255,255,0.5);
+      font-size:16px;
+      line-height: 24px;
+    }
+    .movie_post .movie_post_txt::after{
+      content:'포스트 쓰기';
+      display:block;
+      height:auto;
+      border:1px solid rgba(255,255,255,0.5);
+      border-radius:30px;
+      padding:10px;
+      color:rgba(255,255,255,0.5);
+    }
+
+    .movie_post .swiper-slide{
+      width:160px;
+    }
+    .movie_post_content{
+      border-radius:5px;
+      overflow: hidden;
+      background-color:#342235;
+    }
+    .movie_post_content .post_img{
+      height:100px;
+      overflow: hidden;
+      position:relative;
+    }
+    .movie_post_content .post_img img{
+      width:200%;
+      position: absolute;
+      left:50%;
+      top:-20%;
+      transform:translateX(-50%);
+    }
+
+    .post_id{
+      padding:10px;
+      font-size:12px;
+      color:gray;
+    }
+    .post_tit{
+      padding:10px;
+      font-size:16px;
+      color:white;
+    }
+    .post_txt{
+      padding:10px;
+      color:rgba(255,255,255,0.5);
+    }
+    
     </style>
 
 
@@ -1677,6 +1757,121 @@
         </ul>
         <hr>
       </div>
+    </section>
+    <section class="section movie_post">
+      <div class="container01">
+        <h2>무비포스트</h2>
+        <p class="movie_post_txt">
+          영화관람 하셨나요?<br>
+          나만의 무비포스트를 남겨보세요.
+        </p>
+      </div>
+      <div class="container02">
+        <div class="swiper-container swiper-container05">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img01.jpg" alt="post01">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img02.jpg" alt="post02">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img03.jpg" alt="post03">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img04.jpg" alt="post04">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img05.jpg" alt="post05">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img05.jpg" alt="post05">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img07.jpg" alt="post07">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img08.jpg" alt="post08">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img09.jpg" alt="post09">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="movie_post_content">
+                <div class="post_img">
+                  <img src="images/post_img10.jpg" alt="post10">
+                </div>
+                <p class="post_id">pam74**</p>
+                <p class="post_tit">날씨의아이</p>
+                <p class="post_txt">ㄲㅈ</p>
+              </div>
+            </div>
+          </div>          
+        </div>        
+      </div>      
     </section>
   </div>
 </body>
